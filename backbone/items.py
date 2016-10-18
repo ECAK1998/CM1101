@@ -12,4 +12,4 @@ item_money = class_item("money", "money", "This wad of cash is barely enough to 
 item_biscuits = class_item("biscuits", "a pack of biscuits", "a pack of biscuits.")
 item_pen = class_item("pen", "a pen", "a basic ballpoint pen.")
 item_handbook = class_item("handbook", "a student handbook", "This student handbook explains everything. Seriously.")
-item_smartphone = class_item("trust yet overpriced smarthphone","you feel like you can get around quickly with this device")
+item_smartphone = class_item("trusty yet overpriced smarthphone","you feel like you can get around quickly with this device")
