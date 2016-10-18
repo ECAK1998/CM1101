@@ -6,13 +6,14 @@ class class_item():
 		self.name = name
 		self.description = description
 
-item_id = class_item("id", "id card", "Your new shiny student ID card. Expires 1 June 2017. You wonder why they have printed a suicide hotline number on it?...")
+item_id = class_item("id", "id card", "Your new shiny student ID card. Expires 1 June 2020.")
 item_laptop = class_item("laptop", "laptop", "It has seen better days. At least it has a WiFi card!")
 item_money = class_item("money", "money", "This wad of cash is barely enough to pay your tuition fees.")
 item_biscuits = class_item("biscuits", "a pack of biscuits", "a pack of biscuits.")
 item_pen = class_item("pen", "a pen", "a basic ballpoint pen.")
 item_handbook = class_item("handbook", "a student handbook", "This student handbook explains everything. Seriously.")
 item_smartphone = class_item("Smarthphone", "Apple", "trusty yet overpriced smarthphone","you feel like you can get around quickly with this device")
+item_USB = = class_item("USB", "USB", "it has some sick tunes on this some owned by someone called Dj hazard mau5's)
 item_key_R = class_item("key", "Red" "inscription says ADM")
 item_key_O = class_item("key", "Orange" "inscription says INS")
 item_key_Y = class_item("key", "yellow")
