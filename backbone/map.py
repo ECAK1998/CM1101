@@ -1,5 +1,8 @@
 >>> from items import *
 from encounter import *
+from player import *
+global inventory
+global current_room
 
 class room():
 	"""The base class for all rooms"""
@@ -9,7 +12,7 @@ class room():
 		self.exits = exits
 		self.items = items
 		self.encounter = encounter
-		self.NPCs = NPCs
+		
 				
 room_reception = room("Reception", 
 """You find yourself in the Cardiff School of Computer Science and
@@ -29,21 +32,36 @@ North goes to the canteen.
 """,
 {"south": "Admins", "east": "Tutor", "west": "Parking","north":"Canteen","staircase":"T 2.09"}, [item_biscuits, item_handbook], "", "")
  
-room_admins = room("MJ and Simon's room",
+room_admins = room
+for item in inventory:
+if item.id = item_key_R and item_key_O:
+            item_present = False
+("MJ and Simon's room",
 """You are leaning agains the door of the systems managers'
 room. Inside you notice Matt "MJ" John and Simon Jones. They
 ignore you. To the north is the reception.
 You try your best to get their attention it is unsuccessful""",
-{"north": "Reception","Smarthphone":"Reception"}, [item_id], "", "")
+{"north": "Reception","Smarthphone":"Reception"}, [], "", "")
 
-room_tutor = room("your personal tutor's office",
+else item_present = True
+""" simon and mj finally notice you and direct you to your student id now you can enter the labs"""
+{"north": "Reception","Smarthphone":"Reception"}, [item_id], "", "")
+ 
+room_tutor = room
+for item in inventory:
+if item_id = item_key_O
+        item_present = True
+current_room.encounter == False
+else
+current_room.encounter == True
+("your personal tutor's office",
 """You are in your personal tutor's office. they intently
 stare at their huge monitor, Defeated they carry on with their work.
 On the desk you notice a cup of coffee and an empty
 pack of biscuits and an orange key.
 
 The reception is to the west.""",
-{"west": "Reception","Smarthphone":"Reception"},[], "", "")
+{"west": "Reception","Smarthphone":"Reception"},[item_key_O], "", "")
 
 room_parking = room("the parking lot",
 """You are standing in the Queen's Buildings parking lot.
@@ -62,26 +80,51 @@ If you go west you can return to the Queen's Buildings.""",
                       
 {"west": "Parking","Smarthphone":"Reception"}, [item_pen,item_key_B], "", "")
 
-room_T2.09 = room("lecture theater",
+room_T2.09 = room
+for item in inventory:
+if item_id = item_key_Y
+        item_present = True
+current_room.encounter == False
+else
+current_room.encounter == True
+("lecture theater",
 """this is the lecture hall where you wont be exhausted by the time you get to it,
 its a fairly cramed room when everyones here today it looks empty, the lectures sits in the swivel chair exhausted after losing to you in a dance battle.
 you can get back to reception via the staircase
 """,
 
-{"staircase":"Reception","Smarthphone":"Reception"}[],"","")
+{"staircase":"Reception","Smarthphone":"Reception"}[item_key_Y],"","")
 
-room_WX3.07 = room ("WX 3.07",
+
+room_WX3.07 = room
+for item in inventory:
+if item_id = item_key_I
+        item_present = True
+current_room.encounter == False
+else
+current_room.encounter == True
+("WX 3.07",
 """ The western extension the small lecture room where you faced the guest speaker,
 they enticed you with the description sherlock and you thought may have something to do with robert downey jr or benedict cumberbatch
 so you defeted them with your impressive skanking skills you found the indigo key here """
 
-{"west":"S 2.22", "South":"Parking","Smarthphone":"Reception"}[]"","")
+{"west":"S 2.22", "South":"Parking","Smarthphone":"Reception"}[item_key_I]"","")
 
-room_S2.22 = room ("S 2.22",
+ 
+
+room_S2.22 = room
+for item in inventory:
+if item_id = item_key_V
+        item_present = True
+current_room.encounter == False
+else
+current_room.encounter == True 
+("S 2.22",
 """the rarley ventured south building, one does not simply walk into south building
 another lecturer sits defeated on the floor, you found the violet key here"""
 
-{"east":"WX 3.07","Smarthphone":"Reception"}[]"","")
+{"east":"WX 3.07","Smarthphone":"Reception"}[item_key_V]"","")
+
 
 room_central = room ("central",
 """the central building this building has the staircase from hell,
@@ -89,24 +132,58 @@ but taking the lift takes just as long so you should probably just walk"""
 
 {"staircase": "C 2.04-5","East":"Parking","Smarthphone":"Reception"}[]"","")
 
-room_C2.04-5 = room ("C 2.04-5",
+room_C2.04-5 = room
+for item in inventory:
+if item_id = item_key_G
+        item_present = True
+current_room.encounter == False
+else
+current_room.encounter == True
+("C 2.04-5",
 """ the main lab for computer science you've spent a lot of hours here,
 the lecturer here was a hardy and steadfast in their defence of their key
 you found the green key here 
 """
-{"staircase down": "central","staircase up":"N 4.07","Smarthphone":"Reception"}[]"","")
- 
-room_N4.07 = room  ("N 4.07","""here stood the final lecturer,
+{"staircase down": "central","staircase up":"N 4.07","Smarthphone":"Reception"}[item_key_G]"","")
+ else current_room.encounter == false
+
+room_N4.07 = room
+for item in inventory:
+if item_id = item_key_ROYGBIV
+        item_present = True
+current_room.encounter == False
+else
+current_room.encounter == True
+("N 4.07","""here stood the final lecturer,
 the final challenge, the only thing which stood between you and a summer of relative freedom
 walk through the fire exit doors to complete your journey
+
+A sparkling rainbow key sits atop the lectures table.
+
+
 """
 
-{"forward":"Roof","Smarthphone":"Reception"}[]"","")
+{"forward":"Roof","Smarthphone":"Reception"}[item_key_ROYGBIV]"","")
+
+
 
 room_Roof = room ("rooftop","""you've done it, youve beaten them all,
 achived your final grade, you have become the very best,
 You get the title of edm death machine,
 Now you get to enjoy the rare picturesque day, you sly fox"""
+
+room_canteen = room
+if item_id = item_key_R
+        item_present = True
+current_room.encounter == False
+else
+current_room.encounter == True
+("canteen",
+""" Where you can get your healthy meals and on days like today a scence from high school musical breaks out,
+you found the red key here"""
+
+
+{"South":"reception","Smarthphone":"Reception"}[item_key_R]"","")
 
 rooms = {
     "Reception": room_reception,
